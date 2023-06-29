@@ -19,6 +19,9 @@
       "dom"
     ],
     "paths": {
+      "ng-text-diff-forked": [
+        "dist/ng-text-diff-forked"
+      ],
       "ngx-text-diff": [
         "dist/ngx-text-diff"
       ],

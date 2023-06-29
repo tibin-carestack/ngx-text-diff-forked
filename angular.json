@@ -112,37 +112,35 @@
         }
       }
     },
-    "ngx-text-diff": {
-      "root": "projects/ngx-text-diff",
-      "sourceRoot": "projects/ngx-text-diff/src",
+    "ng-text-diff-forked": {
       "projectType": "library",
-      "prefix": "td",
+      "root": "projects/ng-text-diff-forked",
+      "sourceRoot": "projects/ng-text-diff-forked/src",
+      "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngx-text-diff/tsconfig.lib.json",
-            "project": "projects/ngx-text-diff/ng-package.json"
+            "project": "projects/ng-text-diff-forked/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-text-diff/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-text-diff-forked/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-text-diff-forked/tsconfig.lib.json"
             }
-          }
-},
+          },
+          "defaultConfiguration": "production"
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-text-diff/src/test.ts",
-            "tsConfig": "projects/ngx-text-diff/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-text-diff/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["projects/ngx-text-diff/tsconfig.lib.json", "projects/ngx-text-diff/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": "projects/ng-text-diff-forked/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         }
       }
