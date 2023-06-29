@@ -144,6 +144,39 @@
           }
         }
       }
+    },
+    "ngx-text-diff-forked": {
+      "projectType": "library",
+      "root": "projects/ngx-text-diff-forked",
+      "sourceRoot": "projects/ngx-text-diff-forked/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-text-diff-forked/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-text-diff-forked/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-text-diff-forked/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ngx-text-diff-forked/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-text-diff-app"

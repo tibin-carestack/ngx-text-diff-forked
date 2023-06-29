@@ -25,6 +25,9 @@
       "ngx-text-diff": [
         "dist/ngx-text-diff"
       ],
+      "ngx-text-diff-forked": [
+        "dist/ngx-text-diff-forked"
+      ],
       "ngx-text-diff/*": [
         "dist/ngx-text-diff/*"
       ]
