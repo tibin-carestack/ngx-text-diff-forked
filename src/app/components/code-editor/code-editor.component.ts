@@ -23,7 +23,7 @@ function normalizeLineEndings(str: string) {
   return str.replace(/\r\n|\r/g, '\n');
 }
 
-declare var require: any;
+declare const require: any;
 
 @Component({
   selector: 'tda-code-editor',
